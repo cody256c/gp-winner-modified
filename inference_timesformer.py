@@ -316,7 +316,7 @@ if __name__ == "__main__":
 
                     preds.append(mask_pred)
             
-            os.makedirs(f'{out_path}', exist_ok=True)
+            os.makedirs(f'{args.out_path}', exist_ok=True)
             img = Image.fromarray(preds[0])
             img.save(f'{out_path}/{fragment_id}.png')
             #img=wandb.Image(
