@@ -20,6 +20,7 @@ import os
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import PIL.Image
+from PIL import Image
 PIL.Image.MAX_IMAGE_PIXELS = 933120000
 #os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from tap import Tap
@@ -313,6 +314,7 @@ if __name__ == "__main__":
                     mask_pred= predict_fn(test_loader, model, device, test_xyxz,test_shape)
                     mask_pred=np.clip(np.nan_to_num(mask_pred),a_min=0,a_max=1)
                     mask_pred/=mask_pred.max()
+                    mask_pred = (mask_pred * 255).asytpe(np.uint8)
 
                     preds.append(mask_pred)
             
