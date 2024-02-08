@@ -1,0 +1,14 @@
+Pillow
+albumentations
+opencv-python
+numpy
+pytorch_lightning
+scipy
+segmentation_models_pytorch
+six
+timesformer_pytorch
+torch
+torchvision
+tqdm
+typed-argument-parser
+warmup_scheduler
