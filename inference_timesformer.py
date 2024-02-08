@@ -320,7 +320,7 @@ if __name__ == "__main__":
             
             os.makedirs(f'{args.out_path}', exist_ok=True)
             img = Image.fromarray(preds[0])
-            img.save(f'{out_path}/{fragment_id}.png')
+            img.save(f'{args.out_path}/{fragment_id}.png')
             #img=wandb.Image(
             #preds[0], 
             #caption=f"{fragment_id}"
