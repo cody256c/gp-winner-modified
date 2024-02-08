@@ -314,7 +314,7 @@ if __name__ == "__main__":
                     mask_pred= predict_fn(test_loader, model, device, test_xyxz,test_shape)
                     mask_pred=np.clip(np.nan_to_num(mask_pred),a_min=0,a_max=1)
                     mask_pred/=mask_pred.max()
-                    mask_pred = (mask_pred * 255).asytpe(np.uint8)
+                    mask_pred = (mask_pred * 255).astype(np.uint8)
 
                     preds.append(mask_pred)
             
